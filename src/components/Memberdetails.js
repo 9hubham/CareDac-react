@@ -11,7 +11,7 @@ import {
   MenuItem,
   FormControl,
   Select,
-  InputLabel
+  InputLabel,
 } from "@mui/material";
 import * as React from "react";
 import D from "../assests/B.png";
@@ -27,7 +27,7 @@ function Member() {
   const handleChange = (event) => {
     setState(event.target.value);
   };
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <Box
@@ -39,8 +39,7 @@ function Member() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          margin: "0",
-          padding: "0",
+          
         }}
       >
         <Box
@@ -502,7 +501,7 @@ function Member() {
                 width: "452px",
                 gap: "8px",
               }}
-              onClick={()=>navigate("/patientDetails")}
+              onClick={() => navigate("/patientDetails")}
             >
               <Typography
                 sx={{

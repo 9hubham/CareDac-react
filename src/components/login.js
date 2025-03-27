@@ -37,8 +37,6 @@ export default function Login() {
         justifyContent: "center",
         margin: "0",
         padding: "0",
-        width: "1440px",
-        height: "900px",
         minHeight: "100vh",
         minWidth: "100vw",
       }}

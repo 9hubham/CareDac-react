@@ -28,8 +28,6 @@ function Services() {
           minWidth: "100vw",
           margin: "0",
           padding: "0",
-          width:"1440px",
-          height:"900px"
         }}
       >
         <Box sx={{ height: "496px", width: "500px" }}>

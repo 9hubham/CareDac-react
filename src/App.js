@@ -10,7 +10,7 @@ import Member from "./components/Memberdetails";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Services from "./components/services";
 import ResetYourPassword from "./components/resetYourPassword";
-import PatientDetails from"./components/patientDetails";
+import PatientDetails from "./components/patientDetails";
 
 // import Login from "./components/login";
 
