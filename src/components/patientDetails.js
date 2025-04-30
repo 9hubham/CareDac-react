@@ -14,8 +14,10 @@ import {
   Select,
 } from "@mui/material";
 import location from "../assests/Group 1.png";
+import { useNavigate } from "react-router-dom";
 
 export default function PatientDetails() {
+  const navigate = useNavigate();
   const [state, setState] = useState("");
 
   const handleChange = (event) => {
@@ -280,6 +282,7 @@ export default function PatientDetails() {
               variant="contained"
               color="primary"
               size="large"
+              onClick={() => navigate("/homepage")}
               sx={{
                 mt: 3,
                 mb: 2,

@@ -24,6 +24,8 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function Signup() {
+  const navigate = useNavigate();
+  
   const [formData, setFormData] = useState({
     full_name: "Nitish",
     email: "nitish@yopmail.com",
@@ -35,6 +37,7 @@ function Signup() {
     role: "patient",
     termsAccepted: false,
   });
+  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -42,8 +45,11 @@ function Signup() {
       [name]: type === "checkbox" ? checked : value,
     });
   };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submitted");
+    
     if (formData.password !== formData.confirm_Password) {
       alert("password do not match");
       return;
@@ -54,6 +60,7 @@ function Signup() {
     }
 
     try {
+      console.log("Attempting to register user");
       const response = await axios.post(
         "https://dev.caredac.com/api/v1/auth/register",
         {
@@ -66,14 +73,20 @@ function Signup() {
           role: formData.role,
         }
       );
+      console.log("Registration successful:", response.data);
       alert(response.data.message);
-      navigate("/login");
+      
+      // Force navigation with timeout to ensure alert is processed first
+      setTimeout(() => {
+        console.log("Navigating to /needsCare");
+        navigate("/needsCare");
+      }, 100);
     } catch (error) {
-      alert(error.response?.data?.message || "Registration failed,try again.");
+      console.error("Registration error:", error);
+      alert(error.response?.data?.message || "Registration failed, try again.");
     }
   };
 
-  const navigate = useNavigate();
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -420,7 +433,7 @@ function Signup() {
                       borderRadius: "30px",
                     }}
                     name="termsAccepted"
-                    value={formData.termsAccepted}
+                    checked={formData.termsAccepted}
                     onChange={handleChange}
                   />
                 }
@@ -429,8 +442,9 @@ function Signup() {
               <Button
                 variant="contained"
                 type="submit"
+                onClick={() => navigate('/needsCare')}
                 sx={{
-                  color: "#024FAA",
+                  backgroundColor: "#024FAA",
                   borderRadius: "40px",
                   paddingtop: "16px",
                   paddingBottom: "16px",
@@ -468,12 +482,14 @@ function Signup() {
                   Already have an account?
                 </Typography>
                 <Typography
+                  onClick={() => navigate("/login")}
                   sx={{
                     fontSize: "14px",
                     fontWeight: 600,
                     color: "#024FAA",
                     fontFamily: "Inter",
                     textTransform: "none",
+                    cursor: "pointer",
                   }}
                 >
                   Login

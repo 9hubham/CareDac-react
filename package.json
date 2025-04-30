@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource-variable/onest": "^5.2.7",
     "@fontsource/inter": "^5.2.5",
     "@fontsource/onest": "^5.2.6",
     "@fontsource/roboto": "^5.2.5",

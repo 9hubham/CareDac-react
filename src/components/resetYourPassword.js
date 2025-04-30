@@ -184,7 +184,7 @@ const ResetYourPassword = () => {
                 mb: 5,
                 borderRadius: "40px",
               }}
-              onClick={() => navigate("/login")}
+              onClick={() => navigate("/signup")}
             >
               Submit
             </Button>

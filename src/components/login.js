@@ -169,7 +169,7 @@ export default function Login() {
                   borderRadius: "20px",
                 },
               }}
-              onClick={() => navigate("/needsCare")}
+              onClick={() => navigate("/Otp")}
             >
               Log In
             </Button>
