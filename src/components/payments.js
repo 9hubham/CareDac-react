@@ -1,20 +1,8 @@
 import {
-  Toolbar,
-  AppBar,
   Typography,
-  Button,
   Box,
   Stack,
-  MenuItem,
-  FormControl,
-  Select,
-  InputAdornment,
 } from "@mui/material";
-import Profileimg from "../assests/bodylogo.png";
-import Logo from "../assests/logo.png";
-import Arrow from "../assests/arrow-down.png";
-import Down from "../assests/Icon.png";
-import Search from "../assests/search 1.png";
 import Kimberly from "../assests/profile(3).png";
 import Judith from "../assests/profile(4).png"
 import Alex from "../assests/profile(2).png";

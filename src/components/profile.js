@@ -1,14 +1,9 @@
 import "@fontsource-variable/onest";
 import {
-  Toolbar,
-  AppBar,
   Typography,
   Button,
   Box,
   Stack,
-  MenuItem,
-  FormControl,
-  Select,
   InputAdornment,
   Rating,
   Modal,

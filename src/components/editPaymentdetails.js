@@ -4,7 +4,6 @@ import {
   Stack,
   TextField,
   InputAdornment,
-  FormControlLabel,
   Switch,
   Button,
 } from "@mui/material";
